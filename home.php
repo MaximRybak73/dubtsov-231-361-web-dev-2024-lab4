@@ -1,5 +1,6 @@
 <?php include("header.html");
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $FIO = $_POST['FIO']; /* получить значение из поля с именем FIO */
     $email = $_POST['Email'];
@@ -19,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['attachment']) & $_POST['attachment'] != '')
         echo '<p>Вы приложили следующий файл: ' . $_POST['attachment'] . "</p>";
 
-        echo '<br><a class="btn" href="index.php?FIO=' . urlencode($FIO) . '&Email=' . urlencode($email) . '&state=' . urlencode($state) . '">Заполнить снова</a>';
+        echo '<br><br><a style="margin-left: 15px" class="btn" href="index.php?FIO=' . urlencode($FIO) . '&Email=' . urlencode($email) . '&state=' . urlencode($state) . '">Заполнить снова</a>';
 }
 include('footer.html');
 ?>
